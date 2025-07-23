@@ -10,14 +10,14 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create('players', function (Blueprint $table) {
             $table->ulid('id')->primary();
             $table->string('name', 255);
-            $table->string('code')->nullable();
-            $table->string('phone_code', 10)->nullable();
-            $table->string('currency', 10)->nullable();
-            $table->text('flag')->nullable();
-            $table->boolean('active')->default(true);
+            $table->string('nickname')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->foreignUlid('club_id')->references('id')->on('clubs')->restrictOnDelete();
             $table->foreignUlid('created_by')->references('id')->on('users')->restrictOnDelete();
             $table->foreignUlid('updated_by')->references('id')->on('users')->restrictOnDelete();
             $table->foreignUlid('deleted_by')->references('id')->on('users')->restrictOnDelete();
@@ -31,6 +31,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists('players');
     }
 };
