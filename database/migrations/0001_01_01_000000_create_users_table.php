@@ -19,6 +19,9 @@ return new class () extends Migration {
             $table->foreignUlid('profile_id')->references('id')->on('profiles')->restrictOnDelete();
             $table->boolean('active')->default(true);
             $table->rememberToken();
+            $table->foreignUlid('created_by')->nullable()->references('id')->on('users')->restrictOnDelete();
+            $table->foreignUlid('updated_by')->nullable()->references('id')->on('users')->restrictOnDelete();
+            $table->foreignUlid('deleted_by')->nullable()->references('id')->on('users')->restrictOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });
