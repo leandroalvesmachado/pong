@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Profile;
 use App\Models\User;
 use Exception;
 use Illuminate\Database\Seeder;
@@ -17,14 +18,20 @@ class UserSeeder extends Seeder
         try {
             DB::beginTransaction();
 
-            $users = [
-                ['name' => 'Brazil', 'code' => 'BR', 'currency' => 'BRL'],
-            ];
+            $name = env('USER_NAME');
+            $email = env('USER_EMAIL');
+            $password = env('USER_PASSWORD');
 
-            foreach ($users as $user) {
-                $countrySeeder = new User();
-                $countrySeeder->name = $country['name'];
-                $countrySeeder->save();
+            $profile = Profile::where('code', 1)->get()->first();
+
+            if (!User::where('email', $email)->exists()) {
+                $userSeeder = new User();
+                $userSeeder->name = $name;
+                $userSeeder->email = $email;
+                $userSeeder->email_verified_at = date('Y-m-d H:i:s');
+                $userSeeder->profile_id = $profile->id;
+                $userSeeder->password = $password;
+                $userSeeder->save();
             }
 
             DB::commit();

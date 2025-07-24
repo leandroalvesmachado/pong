@@ -18,10 +18,10 @@ class CountrySeeder extends Seeder
         try {
             DB::beginTransaction();
 
-            $user = User::where('email', 'leandroalvesmachado@gmail.com')->first();
+            $user = User::where('email', env('USER_EMAIL'))->first();
 
             $countries = [
-                ['name' => 'Brazil', 'code' => 'BR', 'currency' => 'BRL'],
+                ['name' => 'Brazil', 'code' => 'BR', 'currency' => 'R$'],
             ];
 
             foreach ($countries as $country) {
@@ -37,6 +37,7 @@ class CountrySeeder extends Seeder
 
             DB::commit();
         } catch (Exception $e) {
+            echo $e->getMessage();
             DB::rollBack();
         }
     }

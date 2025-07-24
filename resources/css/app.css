@@ -1,3 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@import url('../../public/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css');
+@import url('../../public/AdminLTE-3.2.0/dist/css/adminlte.min.css');

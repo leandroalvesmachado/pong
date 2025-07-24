@@ -21,7 +21,7 @@ return new class () extends Migration {
             $table->string('address', 255)->nullable();
             $table->foreignUlid('created_by')->references('id')->on('users')->restrictOnDelete();
             $table->foreignUlid('updated_by')->references('id')->on('users')->restrictOnDelete();
-            $table->foreignUlid('deleted_by')->references('id')->on('users')->restrictOnDelete();
+            $table->foreignUlid('deleted_by')->nullable()->references('id')->on('users')->restrictOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });

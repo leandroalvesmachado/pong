@@ -17,13 +17,17 @@ return new class () extends Migration {
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->foreignUlid('profile_id')->references('id')->on('profiles')->restrictOnDelete();
+            $table->string('language')->default('pt_BR');
             $table->boolean('active')->default(true);
             $table->rememberToken();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::table('users', function (Blueprint $table) {
             $table->foreignUlid('created_by')->nullable()->references('id')->on('users')->restrictOnDelete();
             $table->foreignUlid('updated_by')->nullable()->references('id')->on('users')->restrictOnDelete();
             $table->foreignUlid('deleted_by')->nullable()->references('id')->on('users')->restrictOnDelete();
-            $table->timestamps();
-            $table->softDeletes();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

@@ -17,7 +17,7 @@ return new class () extends Migration {
             $table->foreignUlid('country_id')->references('id')->on('countries')->restrictOnDelete();
             $table->foreignUlid('created_by')->references('id')->on('users')->restrictOnDelete();
             $table->foreignUlid('updated_by')->references('id')->on('users')->restrictOnDelete();
-            $table->foreignUlid('deleted_by')->references('id')->on('users')->restrictOnDelete();
+            $table->foreignUlid('deleted_by')->nullable()->references('id')->on('users')->restrictOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });
