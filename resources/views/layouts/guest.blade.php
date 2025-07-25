@@ -10,8 +10,8 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="../../index2.html">
-        <img src="{{ Vite::asset('resources/images/logo-login.png') }}" alt="Ping Pong Logo" class="w-50">
+      <a href="#">
+        <img src="{{ Vite::asset('resources/images/logo-login.png') }}" alt="Ping Pong Logo" class="w-75">
       </a>
     </div>
     <div class="card">

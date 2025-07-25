@@ -1,3 +1,22 @@
 @import url('../../public/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css');
 @import url('../../public/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css');
 @import url('../../public/AdminLTE-3.2.0/dist/css/adminlte.min.css');
+
+.login-page,
+.register-page {
+  background-color: #F5DEB3;
+  height: 80vh;
+}
+
+.login-logo {
+  margin-bottom: 0px;
+}
+
+.login-card-body {
+  border-radius: 5px;
+}
+
+.login-box,
+.register-box {
+  width: 450px;
+}
