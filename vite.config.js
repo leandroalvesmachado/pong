@@ -13,6 +13,8 @@ export default defineConfig({
                 'resources/js/login.js',
                 'resources/css/home.css',
                 'resources/js/home.js',
+                'resources/css/site.css',
+                'resources/js/site.js',
             ],
             refresh: true,
         }),
