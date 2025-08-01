@@ -6,6 +6,12 @@ return [
         'email_placeholder' => 'E-mail',
         'password_placeholder' => 'Senha',
         'submit' => 'Entrar'
+    ],
+    'home' => [
+        'administration_title' => 'Administração',
+        'administration_subtitle' => 'Módulo Administração',
+        'player_title' => 'Atleta',
+        'player_subtitle' => 'Módulo Atleta'
     ]
     // 'title' => [
     //     'singular' => 'País',
