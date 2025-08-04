@@ -10,7 +10,7 @@
 <body class="hold-transition layout-top-nav">
   <div class="wrapper">
     <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
-      <div class="container">
+      <div class="container-fluid">
         <a href="../../index3.html" class="navbar-brand">
           <img src="#" alt="AdminLTE Logo" class="brand-image img-circle" style="opacity: .8">
           <span class="brand-text font-weight-light">PONG</span>
@@ -19,9 +19,9 @@
     </nav>
     <div class="content-wrapper">
       <div class="content-header">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row mb-2">
-            <div class="col-sm-6">
+            <div class="col-sm-6 text-uppercase">
               <h1 class="m-0">Bem-vindo<small>, {{ auth()->user()->name }}</small></h1>
             </div>
           </div>
