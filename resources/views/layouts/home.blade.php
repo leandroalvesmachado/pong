@@ -12,8 +12,13 @@
     <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
       <div class="container-fluid">
         <a href="../../index3.html" class="navbar-brand">
-          <img src="#" alt="AdminLTE Logo" class="brand-image img-circle" style="opacity: .8">
-          <span class="brand-text font-weight-light">PONG</span>
+          <img
+            src="{{ Vite::asset('resources/images/logo-login.png') }}"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle"
+            style="opacity: .8"
+          >
+          <span class="brand-text font-weight-light text-white">PONG</span>
         </a>
       </div>
     </nav>
