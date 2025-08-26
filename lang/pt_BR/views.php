@@ -8,11 +8,16 @@ return [
         'submit' => 'Entrar'
     ],
     'home' => [
-        'administration_title' => 'Administração',
-        'administration_subtitle' => 'Módulo Administração',
-        'player_title' => 'Atleta',
-        'player_subtitle' => 'Módulo Atleta'
-    ]
+        'title' => 'Módulos do Sistema',
+        'module' => [
+            'administration_title' => 'Administração',
+            'administration_description' => 'Módulo responsável pelo controle administrativo, incluindo cadastros, acessos e definições globais da aplicação.',
+            'player_title' => 'Atleta',
+            'player_description' => 'Módulo Atleta'
+        ]
+    ],
+    'admin' => [
+    ],
     // 'title' => [
     //     'singular' => 'País',
     //     'plural' => 'Países',

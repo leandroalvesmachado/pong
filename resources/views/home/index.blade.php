@@ -11,8 +11,8 @@
               style="object-fit: contain; height: 200px;"
             >
             <div class="card-body">
-              <h5 class="card-title">{{ __('views.home.administration_title') }}</h5>
-              <p class="card-text">{{ __('views.home.administration_subtitle') }}</p>
+              <h5 class="card-title">{{ __('views.home.module.administration_title') }}</h5>
+              <p class="card-text">{{ __('views.home.module.administration_description') }}</p>
             </div>
           </div>
         </a>
@@ -26,8 +26,8 @@
             style="object-fit: contain; height: 200px;"
           >
           <div class="card-body">
-            <h5 class="card-title">{{ __('views.home.player_title') }}</h5>
-            <p class="card-text">{{ __('views.home.player_subtitle') }}</p>
+            <h5 class="card-title">{{ __('views.home.module.player_title') }}</h5>
+            <p class="card-text">{{ __('views.home.module.player_description') }}</p>
           </div>
         </div>
       </div>
