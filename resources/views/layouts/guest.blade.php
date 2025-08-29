@@ -7,8 +7,21 @@
   <title>{{ config('app.name', 'Laravel') }} | Login</title>
   @vite(['resources/css/login.css', 'resources/js/login.js'])
 </head>
-<body class="hold-transition login-page">
-  <div class="login-box">
+<body class="hold-transition vh-100">
+  <div class="container-fluid">
+    <div class="row bg-primary">
+      <div class="col text-center">
+        <img src="{{ Vite::asset('resources/images/logo-login.png') }}" alt="Ping Pong Logo" class="w-25" style="object-fit: contain;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">2</div>
+    </div>
+    <div class="row bg-danger">
+      <div class="col text-center">3</div>
+    </div>
+  </div>
+  {{-- <div class="login-box">
     <div class="login-logo">
       <a href="#">
         <img src="{{ Vite::asset('resources/images/logo-login.png') }}" alt="Ping Pong Logo" class="w-75">
@@ -19,6 +32,6 @@
         {{ $slot }}
       </div>
     </div>
-  </div>
+  </div> --}}
 </body>
 </html>
